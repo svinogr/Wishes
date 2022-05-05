@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainFragment_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_menu"
+        />
+
     <include
         android:id="@+id/bottom_menu"
         layout="@layout/bottom_main_menu_layout" />

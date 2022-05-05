@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.wishes.databinding.FragmentFriendsBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -20,8 +21,11 @@ class FriendsFragment : BasicFragmentWithBottomMenu<FragmentFriendsBinding>() {
     }
 
     override fun inflateBottomNavigationView(): BottomNavigationView {
-        print("ddeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewdwdwd")
         return binding.bottomMenu.bottomNavigation
+    }
+
+    override fun setRecyclerView(): RecyclerView {
+        TODO("Not yet implemented")
     }
 
 }
