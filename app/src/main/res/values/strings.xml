@@ -5,11 +5,12 @@
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-
+    <string name="action_messages">Messages</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--- Main menu -->
     <string name="menu_settings">Settings</string>
     <string name="menu_exit">Exit</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Bottom main menu -->
+    <string name="my_wishes">My wishes</string>
+    <string name="friends">Friends</string>
 </resources>
