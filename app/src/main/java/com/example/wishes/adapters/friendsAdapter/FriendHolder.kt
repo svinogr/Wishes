@@ -1,4 +1,4 @@
-package com.example.wishes.adapters.wishesAdapter
+package com.example.wishes.adapters.friendsAdapter
 
 import android.view.View
 import android.widget.ImageView
@@ -9,14 +9,16 @@ import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.wishes.R
-import com.example.wishes.models.Wish
+import com.example.wishes.models.Friend
 
-class WishesHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-    private var img = itemView.findViewById<ImageView>(R.id.card_wish_img)
-    private var title = itemView.findViewById<TextView>(R.id.card_wish_title)
+class FriendHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    private val img = itemView.findViewById<ImageView>(R.id.card_friend_img)
+    private val nameFriend = itemView.findViewById<TextView>(R.id.card_friend_name)
+    private val birthday = itemView.findViewById<TextView>(R.id.card_friend_birthday)
 
-    fun bind(wish: Wish) {
-        title.text = wish.title
+    fun bind(friend: Friend) {
+        nameFriend.text = friend.name
+        birthday.text = friend.birthday.toString()
 
         val transformation = MultiTransformation(CenterCrop(), RoundedCorners(16))
         Glide.with(itemView)

@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.wishes.adapters.friendsAdapter.FriendsAdapter
 import com.example.wishes.databinding.FragmentFriendsBinding
+import com.example.wishes.models.Friend
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import java.util.*
 
 class FriendsFragment : BasicFragmentWithBottomMenu<FragmentFriendsBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,7 +29,22 @@ class FriendsFragment : BasicFragmentWithBottomMenu<FragmentFriendsBinding>() {
     }
 
     override fun setRecyclerView(): RecyclerView {
-        TODO("Not yet implemented")
+        val mainFragmentRecView = binding.friendFragmentRecView
+
+        val adapter = FriendsAdapter(testFriend())
+        mainFragmentRecView.layoutManager = LinearLayoutManager(requireContext())
+        mainFragmentRecView.adapter = adapter
+
+        return mainFragmentRecView
+    }
+
+    private fun testFriend(): List<Friend> {
+        val list = mutableListOf<Friend>()
+        for (i in 1..10) {
+            val wish = Friend("name ${i}", Date())
+            list.add(wish)
+        }
+        return list
     }
 
 }

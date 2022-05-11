@@ -8,12 +8,12 @@
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.wishes.ui.home.SettingsFragment"
-        android:label="@string/menu_settings"
+        android:label="@string/title_fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.wishes.ui.main.MainFragment"
-        android:label="fragment_main"
+        android:label="@string/title_fragment_wishes"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_friendsFragment"
@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/friendsFragment"
         android:name="com.example.wishes.ui.main.FriendsFragment"
-        android:label="fragment_friends"
+        android:label="title_fragment_friends"
         tools:layout="@layout/fragment_friends" >
         <action
             android:id="@+id/action_friendsFragment_to_mainFragment"
