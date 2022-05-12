@@ -16,7 +16,6 @@ abstract class BasicFragmentWithBottomMenu<VB: ViewBinding> : Fragment() {
     private  var _binding: VB? = null
     val binding get() = _binding!!
     private lateinit var bottomMenu: BottomNavigationView
-    open val recyclerView: RecyclerView? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +25,7 @@ abstract class BasicFragmentWithBottomMenu<VB: ViewBinding> : Fragment() {
         _binding = inflateBinding(inflater, container)
 
         setBottomMenu()
-        setRecyclerView()
+        setViews()
 
         return binding.root
     }
@@ -51,5 +50,5 @@ abstract class BasicFragmentWithBottomMenu<VB: ViewBinding> : Fragment() {
 
     abstract fun inflateBinding(inflater: LayoutInflater, container: ViewGroup?): VB
     abstract fun inflateBottomNavigationView(): BottomNavigationView
-    abstract fun setRecyclerView(): RecyclerView
+    abstract fun setViews()
 }

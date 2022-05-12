@@ -28,14 +28,12 @@ class FriendsFragment : BasicFragmentWithBottomMenu<FragmentFriendsBinding>() {
         return binding.bottomMenu.bottomNavigation
     }
 
-    override fun setRecyclerView(): RecyclerView {
+    override fun setViews() {
         val mainFragmentRecView = binding.friendFragmentRecView
 
         val adapter = FriendsAdapter(testFriend())
         mainFragmentRecView.layoutManager = LinearLayoutManager(requireContext())
         mainFragmentRecView.adapter = adapter
-
-        return mainFragmentRecView
     }
 
     private fun testFriend(): List<Friend> {
