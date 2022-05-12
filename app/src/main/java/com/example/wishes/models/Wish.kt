@@ -1,3 +1,3 @@
 package com.example.wishes.models
 
-data class Wish(val id: Int,val title: String)
+data class Wish(val id: Int, val title: String, val shopId: Int): LiveDatable

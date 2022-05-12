@@ -1,4 +1,4 @@
-package com.example.wishes.ui.home
+package com.example.wishes.ui.fragments.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater

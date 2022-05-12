@@ -1,4 +1,4 @@
-package com.example.wishes.ui.main
+package com.example.wishes.ui.fragments.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -41,7 +41,7 @@ class FriendsFragment : BasicFragmentWithBottomMenu<FragmentFriendsBinding>() {
     private fun testFriend(): List<Friend> {
         val list = mutableListOf<Friend>()
         for (i in 1..10) {
-            val wish = Friend("name ${i}", Date())
+            val wish = Friend(i, "name ${i}", Date())
             list.add(wish)
         }
         return list

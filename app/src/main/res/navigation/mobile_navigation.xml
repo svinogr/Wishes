@@ -7,25 +7,54 @@
 
     <fragment
         android:id="@+id/nav_settings"
-        android:name="com.example.wishes.ui.home.SettingsFragment"
+        android:name="com.example.wishes.ui.fragments.settings.SettingsFragment"
         android:label="@string/title_fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.wishes.ui.main.MainFragment"
+        android:name="com.example.wishes.ui.fragments.main.WishFragment"
         android:label="@string/title_fragment_wishes"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_friendsFragment"
             app:destination="@id/friendsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_wishDetailFragment"
+            app:destination="@id/wishDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/friendsFragment"
-        android:name="com.example.wishes.ui.main.FriendsFragment"
+        android:name="com.example.wishes.ui.fragments.main.FriendsFragment"
         android:label="title_fragment_friends"
         tools:layout="@layout/fragment_friends" >
         <action
             android:id="@+id/action_friendsFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_friendsFragment_to_friendDetailFragment"
+            app:destination="@id/friendDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishDetailFragment"
+        android:name="com.example.wishes.ui.fragments.main.detailFragments.WishDetailFragment"
+        android:label="fragment_wish_detail"
+        tools:layout="@layout/fragment_wish_detail" >
+        <argument
+            android:name="ID_WISH"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendDetailFragment"
+        android:name="com.example.wishes.ui.fragments.main.detailFragments.FriendDetailFragment"
+        android:label="fragment_friend_detail"
+        tools:layout="@layout/fragment_friend_detail" >
+        <argument
+            android:name="ID_FRIEND"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_mainFragment_to_wishDetailFragment"
+            app:destination="@id/wishDetailFragment" />
     </fragment>
 </navigation>

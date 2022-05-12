@@ -15,4 +15,6 @@
     <string name="friends">Friends</string>
     <string name="title_fragment_wishes">My wishes</string>
     <string name="title_fragment_friends">Friends</string>
+    <!-- Friend Fragment Detail  -->
+    <string name="delete_friend">DELETE</string>
 </resources>

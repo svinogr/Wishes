@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".ui.fragments.main.WishFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainFragment_rec_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_menu"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/bottom_menu"

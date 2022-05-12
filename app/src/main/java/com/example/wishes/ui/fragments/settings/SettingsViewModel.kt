@@ -1,4 +1,4 @@
-package com.example.wishes.ui.home
+package com.example.wishes.ui.fragments.settings
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,6 +1,5 @@
-package com.example.wishes.ui.main
+package com.example.wishes.ui.fragments.main
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,7 +9,7 @@ import com.example.wishes.databinding.FragmentMainBinding
 import com.example.wishes.models.Wish
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainFragment : BasicFragmentWithBottomMenu<FragmentMainBinding>() {
+class WishFragment : BasicFragmentWithBottomMenu<FragmentMainBinding>() {
 
     override fun inflateBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentMainBinding {
           return  FragmentMainBinding.inflate(inflater, container, false)
@@ -24,7 +23,7 @@ class MainFragment : BasicFragmentWithBottomMenu<FragmentMainBinding>() {
         val mainFragmentRecView = binding.mainFragmentRecView
 
         val adapter = WishesAdapter(testWishe())
-        mainFragmentRecView.layoutManager =LinearLayoutManager(requireContext())
+        mainFragmentRecView.layoutManager = LinearLayoutManager(requireContext())
         mainFragmentRecView.adapter = adapter
 
         return mainFragmentRecView
@@ -33,7 +32,7 @@ class MainFragment : BasicFragmentWithBottomMenu<FragmentMainBinding>() {
     fun testWishe(): List<Wish> {
         val list = mutableListOf<Wish>()
         for (i in 1..10) {
-            val wish = Wish(i, i.toString())
+            val wish = Wish(i, i.toString(), 1)
             list.add(wish)
         }
         return list
